@@ -4,6 +4,7 @@ namespace Sales.Common.Models
     using System;
     using System.ComponentModel.DataAnnotations;
 
+
     public class Product
     {
         [Key]
@@ -17,5 +18,10 @@ namespace Sales.Common.Models
         public bool IsAvailable { get; set; }
 
         public DateTime PublishOn { get; set; }
+
+        public override string ToString()
+        {
+            return this.Description;
+        }
     }
 }
